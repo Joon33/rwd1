@@ -1,0 +1,625 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+/* ******************* 레이아웃 구성시작 **************** */
+#intro{ height: 100vh; position: relative; }
+#map{ height: 357px; }
+#footer{ height: 105px; }
+
+.container{ padding: 105px 0; }
+#header .container, #footer .container{ padding: 21px 0; }
+
+ 
+/* ******************* 공통영역 선언시작 **************** */
+/* ! 작업끝났을 때 설정 */
+body{ overflow-x: hidden; }
+/* !!!!!!!!!!!!!!!!!!! */
+h1, h2, h3, h4, h5, h6{ margin: 0; }
+
+/* Title Setting */
+.title{
+  height: auto;
+  margin-bottom: 84px;
+  text-align: center;
+}
+.title h2{
+  height: 63px;
+  font: 300 3.6rem/63px 'Roboto', sans-serif;
+  margin-bottom: 42px;
+  position: relative;
+}
+
+.title h2::after{
+  display: block;
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #8ec735;
+  position: absolute; left: 50%; bottom: 0;
+  margin-left: -50px;
+}
+.title h2 span{ 
+  font-weight: 500;
+  color: #8ec735;
+ }
+
+/* Covervid CSS */
+.covervid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.covervid-video{
+  object-fit: cover;
+  width: 100% !important;
+  height: 100vh;
+  position: fixed; left: 0; top: 0;
+}
+
+/* Cube-portfolio Reset */
+.cbp-popup-lightbox .cbp-popup-next, 
+.cbp-popup-lightbox .cbp-popup-prev, 
+.cbp-popup-lightbox .cbp-popup-close{
+  width: 46px !important;
+  height: 46px !important;
+}
+
+/* jarallax CSS */
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+ 
+/* ******************* 개별영역 선언시작 **************** */
+/* ************ header Area Start ********* */
+#header{
+  height: 63px;
+  border-radius: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#header h1, #header #gnb{ height: 100%; }
+#header h1 a, #header #gnb a{
+  padding: 0;
+  color: #fff;
+  display: block;
+  height: 100%;
+  font: 700 1.6rem/21px 'Nanum Gothic', sans-serif;
+  text-decoration: none;
+}
+/*? Logo */
+#header h1 a{ font-size: 2.2rem; }
+#header h1 a span{ color: #8ec735; }
+/*? Gnb */
+#header #gnb a{ padding: 0 15px; }
+#header #gnb a:hover{ color: #8ec735; }
+
+/* ************ Intro Area Start ********* */
+#intro .text-box{
+  width: 960px;
+  height: 147px;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+#intro .text-box h2{
+  height: 63px;
+  font: 500 6rem/63px 'Roboto', sans-serif;
+  margin-bottom: 42px;
+}
+/* Mobile Content hidden */
+#intro .container{ display: none; }
+
+/* ************ about Area Start ********* */
+
+/* left-box */
+#about .col-md-7{padding-right: 15px;}
+#about .col-md-7 img{ width: 100%; }
+/* right-box */
+#about .col-md-5{ padding-left: 15px; }
+#about .col-md-5 h3{
+  height: 42px;
+  margin-bottom: 21px;
+  font: 400 3rem/24px 'Nanum Gothic', sans-serif;
+}
+#about .col-md-5 h3 span{
+  font-weight: 700;
+  color: #8ec735;
+}
+#about .col-md-5 p{
+  height: 84px;
+  line-height: 24px;
+  margin-bottom: 42px;
+}
+#about .col-md-5 ul{
+  height: 105px;
+  margin-bottom: 42px;
+}
+#about .col-md-5 ul li{
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+#about .col-md-5 .btn{
+  height: 42px;
+  line-height: 30px;
+}
+
+/* ************ team Area Start ********* */
+#team{ background-color: #333; color:#fff; }
+
+/* Title Area */
+#team .title h2{ margin-bottom: 0; }
+/* Content Area */
+#team .content>div{ height: auto; text-align: center; }
+#team .content>div img{ margin-bottom: 21px; }
+#team .content>div .sns-group{ margin-bottom: 42px; }
+#team .content>div .sns-group a{ 
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 42px;
+  margin: 0 5px;
+}
+#team .content>div .sns-group a:hover{ color: #fc0; border-color: #fc0; }
+#team .content>div h3{
+  font: 700 1.8rem/21px 'Nanum Gothic', sans-serif;
+}
+#team .content>div h3 span{
+  display: block;
+  font-size: 1.3rem;
+  color: #bbb;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+/* ************ service Area Start ********* */
+#service .content>div{
+  width: 23%;
+  height: auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 42px 45px;
+  margin: 0 1% 21px;
+ }
+#service .content>div .icon{
+  height: 42px;
+  color: #8ec735;
+  font-size: 40px;
+  margin-bottom: 21px;
+}
+#service .content>div h3{ 
+  height: 21px;
+  margin-bottom: 21px;
+  font: 700 1.6rem/21px 'Nanum Gothic', sans-serif;
+ }
+
+/* ************ skills Area Start ********* */
+#skills{ background-color: #333; color:#fff; }
+/* Title Area Start */
+#skills.title h2{ margin-bottom: 0; }
+/* Content Area Start */
+#skills .content>div{ text-align: center; }
+#skills .content>div h3{
+  height: 42px;
+  margin-bottom: 42px;
+  font: 700 2.3rem/42px 'Nanum Gothic', sans-serif;
+}
+
+/** Circle Area Start */
+#skills .content>div .circle{ position: relative;}
+#skills .content>div .circle strong{
+  font-size: 2rem;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%); 
+}
+
+/* ************ works Area Start ********* */
+/* Title Area Start */
+#works .title p{ margin-bottom: 63px; }
+/* 겔러리 메뉴 설정시작 */
+#works .title #filters-container{
+  text-align: center;
+}
+#works .title #filters-container .cbp-filter-item{
+  display: inline-block;
+  padding: 10px 25px;
+  margin: 0 5px;
+  border: 1px solid #000;
+  background-color: #fc0;
+  font-weight: bold;
+  cursor: pointer;
+}
+#works .title #filters-container .cbp-filter-item:hover{
+  background-color: #ffa200;
+}
+/* 메뉴 활성화 클래스 */
+.gmenu-act{ background-color: #ffa200 !important; }
+
+
+/* ************ banner Area Start ********* */
+#banner{
+  color:#fff;
+  text-align: center;
+  background-image: url(../images/lg/banner-bg.png);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+#banner::after{
+  content:'';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute; left: 0; top: 0;
+}
+#banner .container{ position: relative; z-index: 999; }
+#banner h2{
+  height: 63px;
+  font: 300 3.6rem/42px 'Roboto', sans-serif;
+  margin-bottom: 63px;
+  position: relative;
+}
+#banner h2::after{
+  content:'';
+  display: block;
+  width: 100px;
+  height: 3px;
+  position: absolute; left: 50%; bottom: 0;
+  margin-left: -50px;
+  background-color: #8ec735;
+}
+#banner h2 span{ font-weight: 500; color:#8ec735; }
+#banner p{ margin: 63px 0; }
+#banner h3{
+  height: 63px;
+  font:400 1.8rem/24px 'Nanum Gothic', sans-serif;
+}
+#banner h3 span{
+  display: block;
+  color:#bbb;
+  font-size: 1.3rem;
+  font-style: oblique;
+}
+
+/* ************ map Area Start ********* */
+#map{ height: 357px; }
+#map .container-fluid{ padding: 0; height: 100%; }
+#map iframe{ width: 100%; height: 100%; }
+
+
+/* ************ contact Area Start ********* */
+#contact form>div:first-child{ 
+  height: auto; 
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+ }
+#contact form>div:first-child .form-group{ width: 370px; height: 42px; }
+#contact form .form-group input,
+#contact form .form-group textarea{
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-indent: 10px;
+  font-size: 1.6rem;
+  
+}
+#contact form .form-group input{
+  width: 100%;
+  height: 42px;;
+}
+#contact form .form-group textarea{ width: 100%; padding-top: 10px; }
+
+/* Placeholder color Setting */
+#contact form input::-webkit-input-placeholder,
+#contact form textarea::-webkit-input-placeholder{ 
+  color: #c1bfbf;
+}
+#contact form input::-moz-placeholder,
+#contact form textarea::-moz-placeholder{ 
+  color: #c1bfbf;
+}
+#contact form input:-ms-input-placeholder,
+#contact form textarea:-ms-input-placeholder{ 
+  color: #c1bfbf;
+}
+#contact form input:-moz-placeholder,
+#contact form textarea:-moz-placeholder{ 
+  color: #c1bfbf;
+}
+
+/* Submit Button */
+#contact p{ text-align: center; margin-top: 63px; }
+#contact #input_submit{
+  width: 200px;
+  height: 42px;
+  font: 700 1.4rem/42px 'Nanum Gothic', sans-serif;
+  border: 1px solid #8ec735;
+  color: #8ec735;
+  background-color: transparent;
+}
+#contact #input_submit:hover{
+  color: #fff;
+  background-color: #8ec735;
+}
+
+/* ************ footer Area Start ********* */
+#footer{ background-color: #8ec735; color: #fff; text-align: center; }
+#footer>div{ height: 42px; position: relative; top: -5px }
+#footer>div a{
+  font-size: 3.6rem;
+  margin: 0 5px;
+  color: #fff;
+}
+#footer>div a:hover{ color: #fc0; }
+#footer p{ margin-bottom: 0; }
+
+ 
+
+
+
+ /* ************ Media Query Area Start *************** */
+@media screen and (max-width: 1220px){
+  /* ************ Contact Area Start ********* */
+  #contact form>div:first-child .form-group{ width: 32%; }
+}
+/* ************ Desktop Area Start ********* */
+@media screen and (max-width: 991px){
+/* ******************* 레이아웃 구성시작 **************** */
+ .container{width: 100%; }
+
+  /* ******************* 개별영역 선언시작 **************** */
+  /* ************ Header Area Start ********* */
+  #header .container{ height: 63px; padding: 21px 15px;  }
+
+  /* ************ Intro Area Start ********* */
+  #intro .text-box{ width: 80%;}
+  #intro .text-box h2{ font-size: 5rem; }
+  /* ************ About Area Start ********* */
+  #about .content{ padding: 0 15px; }
+  #about .content .col-md-7{ width: 57.3333333%; padding-right: 1%; }
+  #about .content .col-md-5{ width: 40.6666667%; padding-left: 1%; }
+  #about .content .col-md-5 p{
+    height: 75px;
+    line-height: 21px;
+    margin-bottom: 28px;
+  }
+  #about .content .col-md-5 ul{ margin-bottom: 26px; }
+  #about .content .col-md-5 ul li{ margin-bottom: 10px; }
+
+
+  /* ************ Team Area Start ********* */
+  #team .content .col-md-3{ width: 25%; }
+  #team .content .col-md-3 img{ width: 189px; }
+
+  /* ************ Skills Area Start ********* */
+  #skills .content .col-md-3{ width: 25%; }
+
+  /* ************ Works Area Start ********* */
+  #works .content{ padding: 0 15px; }
+  
+  /* ************ Banner Area Start ********* */
+  #banner p{ padding: 0 80px; }
+
+  /* ************ Contact Area Start ********* */
+  #contact .row:last-child .col-xs-12{ padding: 0 15px; }
+  
+  
+  }
+
+@media screen and (min-width: 768px) and (max-width: 959px){
+  /* ******************* 레이아웃 구성시작 **************** */
+  .container{ width: 100%; }
+ 
+  /* ******************* 공통영역 선언시작 **************** */
+   
+   
+  /* ******************* 개별영역 선언시작 **************** */
+  /* ************ header Area Start ********* */
+  #header #gnb a{ padding: 0 10px; }
+  /* ************ Intro Area Start ********* */
+   #intro{
+    background: url(../images/sm/intro-bg.png) no-repeat top center;
+    background-size: cover;
+   }
+   #intro .container-fluid{ display: none; }
+   
+   /* *** Mobile Content Area Start  */
+   #intro .container{ display: block; }
+   #intro .text-box{ width: 90%; }
+   
+   /* ************ about Area Start ********* */
+   #about .content .col-md-7,#about .content .col-md-5{
+    width: 100%;
+    padding: 0;
+   }
+   #about .content .col-md-7{ margin-bottom: 63px; }
+
+   /* ************ team Area Start ********* */
+   #team .content .col-md-3{width: 50%; margin-bottom: 63px; }
+   #team .content .col-md-3:nth-child(n+3){ margin-bottom: 0; } 
+   
+   /* ************ service Area Start ********* */
+   #service .content>div{ width: 48%; }
+   
+   /* ************ skills Area Start ********* */
+   #skills .content .col-md-3{ width: 50%; margin-bottom: 63px; }
+   #skills .content .col-md-3:nth-child(n+3){ margin-bottom: 0; }
+   
+   /* ************ map Area Start ********* */
+   #map{ height: 273px; }
+
+   #contact form>div:first-child{ flex-direction: column; }
+   #contact form>div:first-child .form-group{ width: 100%; }
+}
+
+
+
+
+/* ************ Tablet Area Start ********* */
+@media screen and (max-width: 767px){
+  /* ******************* 레이아웃 구성시작 **************** */
+  .container{ width: 100%; }
+ 
+  /* ******************* 공통영역 선언시작 **************** */
+   
+   
+  /* ******************* 개별영역 선언시작 **************** */
+  /* ************ header Area Start ********* */
+  #header .container{ padding: 0 15px; }
+  /* ! navbar-header Area Start */
+  #header .container .navbar-header{ margin: 0; height: 63px;}
+
+  /* ! Mobile Button */
+  #header .container .navbar-toggle{ 
+    margin-top: 13px;
+    margin-right: 0;
+    background-color: transparent;
+   }
+   #header .container .navbar-toggle .icon-bar{
+    background-color: #ddd;
+   }
+
+   /* * Logo */
+   #header h1 a{ line-height: 63px; }
+
+   /* * Gnb Area Start */
+   #header #gnb{ 
+    height: auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+   }
+   #header #gnb a{ 
+    line-height: 42px;
+    font-size: 1.4rem;
+   }
+
+   /* ************ Intro Area Start ********* */
+   #intro{
+    background: url(../images/sm/intro-bg.png) no-repeat top center;
+    background-size: cover;
+   }
+   #intro .container-fluid{ display: none; }
+   
+   /* *** Mobile Content Area Start  */
+   #intro .container{ display: block; }
+   #intro .text-box{ width: 90%; }
+   
+   /* ************ about Area Start ********* */
+   #about .content .col-md-7,#about .content .col-md-5{
+    width: 100%;
+    padding: 0;
+   }
+   #about .content .col-md-7{ margin-bottom: 63px; }
+
+   /* ************ team Area Start ********* */
+   #team .content .col-md-3{width: 50%; margin-bottom: 63px; }
+   #team .content .col-md-3:nth-child(n+3){ margin-bottom: 0; } 
+   
+   /* ************ service Area Start ********* */
+   #service .content>div{ width: 48%; }
+   
+   /* ************ skills Area Start ********* */
+   #skills .content .col-md-3{ width: 50%; margin-bottom: 63px; }
+   #skills .content .col-md-3:nth-child(n+3){ margin-bottom: 0; }
+   
+   /* ************ map Area Start ********* */
+   #map{ height: 273px; }
+
+   #contact form>div:first-child{ flex-direction: column; }
+   #contact form>div:first-child .form-group{ width: 100%; }
+   
+   
+}
+
+/* ************ Mobile Area Start ********* */
+@media screen and (max-width: 680px){
+  /* ? Intro Area Start */
+  #intro .text-box h2{
+    font-size: 4.5rem;
+    line-height: 42px;
+    height: auto;
+  }
+}
+
+
+/* ************ Mobile Area Start ********* */
+@media screen and (max-width: 580px){
+
+  /* ************ 공통영역 선언시작 ********* */
+  .title h2 {
+    height: 94px;
+    font: 300 3.2rem/36px 'Roboto', sans-serif;
+  }
+  .title h2 span{ display: block; }
+
+  /* !!!!!!!!!!!!!!!! 개별영역 선언시작 ********* */
+  /* ************ team Area Start ********* */
+  #team .content .col-md-3{ width: 100%; }
+  #team .content .col-md-3:nth-child(n+3){ margin-bottom: 63px; }
+  #team .content .col-md-3:last-child{ margin-bottom: 0; }
+
+  /* ************ service Area Start ********* */
+  #service .content .col-md-3{ width: 94%; margin: 0 3% 21px; }
+  #service .content .col-md-3:nth-child(n+5){ margin-bottom: 21px; }
+  #service .content .col-md-3:last-child{ margin-bottom: 0; }
+
+    /* ************ skills Area Start ********* */
+    #skills .content .col-md-3{ width: 100%; }
+    #skills .content .col-md-3:nth-child(n+3){ margin-bottom: 63px; }
+    #skills .content .col-md-3:last-child{ margin-bottom: 0; }
+    #skills .content>div h3{ margin-bottom: 21px; }
+
+  /* ************ works Area Start ********* */
+  #works #filters-container{
+    width: 240px;
+    height: auto;
+    margin: auto;
+  }
+  #works .title #filters-container .cbp-filter-item{
+    width: 100%;
+    float: none;
+    margin-bottom: 10px;
+  }
+  #works #grid-container{
+    width: 345px;
+  }
+  
+  /* ************ banner Area Start ********* */
+  #banner h2{
+    height: 94px;
+    font: 300 3.2rem/36px 'Roboto', sans-serif;
+  }
+  #banner h2 span{ display: block; }
+  #banner p{ padding: 0 20px; }
+
+
+}
+
+
